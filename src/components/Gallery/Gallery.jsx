@@ -14,6 +14,7 @@ const Gallery = ({ images, onFetchMore, openModal }) => (
       type="button"
       name="load-more"
       className={styles.button}
+      disabled={images.length < 12}
       onClick={onFetchMore}
     >
       Load more

@@ -12,9 +12,7 @@ const PhotoCard = ({
   downloads,
   openModal,
 }) => {
-  const handleModal = () => {
-    openModal(largeImageURL);
-  };
+  const handleModal = () => openModal(largeImageURL);
   return (
     <div className={styles.photoCard} id={id}>
       <img src={webformatURL} alt="" />

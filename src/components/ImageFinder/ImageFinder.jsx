@@ -48,7 +48,7 @@ class ImageFinder extends Component {
     axios.get(url).then(res => {
       const arr = res.data.hits;
       const parsedArr = parseArr(arr);
-      const scrollPoint = target.offsetTop;
+      const scrollPoint = target.offsetTop - 10;
       this.setState(prev => ({
         images: [...prev.images].concat(parsedArr),
         page: nextPage,
@@ -78,8 +78,7 @@ class ImageFinder extends Component {
     });
   };
 
-  handleCloseModal = e => {
-    const { target } = e;
+  handleCloseModal = ({ target }) => {
     if (target.localName !== 'img') {
       this.setState({
         isModal: false,

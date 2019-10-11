@@ -30,3 +30,7 @@
 .button:focus {
   background-color: #1f65d6;
 }
+
+.button:disabled {
+  background-color: rgb(212, 212, 212);
+}
